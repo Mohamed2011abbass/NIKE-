@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شركة نايك</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        nav {
+        display: flex;
+        justify-content: center;
+        background-color: #d71717;
+        height: 45px;
+      }
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        flex-grow:1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      
+      @media (max-width: 400px) {
+        nav {
+          flex-direction: column;
+          height: 190px;
+        }
+
+      }
+        body {
+            font-family: 'Tahoma', sans-serif;
+            direction: rtl;
+            margin: 0;
+            padding: 0;
+            background-color: #ff0505;
+        }
+
+        header {
+            background-color: #111;
+            color: #ffee00;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo img {
+            width: 100px;
+            height: auto;
+        }
+
+        header nav a {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        header nav ul li {
+            margin: 0;
+        }
+        
+
+        header nav  a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        .hero {
+            background: url('hero-bg.jpg') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 100px 20px;
+            margin-top: -10px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 30px;
+        }
+
+        .hero button {
+            padding: 10px 20px;
+            background-color: #ff0000;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+
+        .hero button:hover {
+            background-color: #cc0000;
+        }
+
+        section {
+            padding: 40px 20px;
+            margin: 20px 0;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #products .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .product {
+            text-align: center;
+        }
+
+        .product img {
+            width: 150px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .product button {
+            padding: 10px 20px;
+            background-color: #111;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .product button:hover {
+            background-color: #555;
+        }
+
+        #news .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .news-item {
+            text-align: center;
+        }
+
+        .news-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .news-item a {
+            display: inline-block;
+            margin-top: 10px;
+            color: #ff0000;
+            text-decoration: none;
+        }
+
+        .news-item a:hover {
+            text-decoration: underline;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        form .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        form label {
+            margin-bottom: 5px;
+        }
+
+        form input, form textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            padding: 10px;
+            background-color: #111;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            background-color: #111;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            margin-top: 20px;
+        }
+
+        footer .social-media a {
+            color: #fff;
+            margin: 0 10px;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        footer .social-media a:hover {
+            color: #ff0000;
+        }
+        body,
+      li,
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7Hsd-J1LC_zjvCsfDE4-kytH_NXu_3odO7A&s" alt="شعار نايك">
+        </div>
+        <nav>
+         
+               <a href="#about">من نحن</a>
+               <a href="#products">منتجاتنا</a>
+               <a href="#news">أخبار</a>
+             <a href="#contact">اتصل بنا</a>
+           
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>أهلاً بك في نايك</h1>
+        <p>اكتشف قوة الرياضة مع منتجات نايك المميزة</p>
+        <button onclick="scrollToSection('#products')">تصفح المنتجات</button>
+    </section>
+
+    <section id="about">
+        <h2>من نحن</h2>
+        <p>نايك هي شركة أمريكية متعددة الجنسيات تقوم بتصميم وتطوير وتصنيع وتسويق وبيع الأحذية والملابس والمعدات والإكسسوارات والخدمات. نسعى دائمًا لتحقيق التميز والابتكار في كل ما نقدمه.</p>
+    </section>
+
+    <section id="products">
+        <h2>منتجاتنا</h2>
+        <div class="product-grid">
+            <div class="product">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2CMdzWD7WJkD_VpLCyu0PoebER538_WzzSw&s" alt="حذاء رياضي">
+                <h3>حذاء رياضي</h3>
+                <p>أفضل الأحذية الرياضية لمختلف الرياضات.</p>
+                <button>اشتر الآن</button>
+            </div>
+            <div class="product">
+                <img src="https://www.cattallog.com/wp-content/uploads/%D8%AA%D9%8A%D8%B4%D9%8A%D8%B1%D8%AA-%D9%86%D8%A7%D9%8A%D9%83-%D8%A7%D9%88%D9%81%D8%B1-%D8%B3%D8%A7%D9%8A%D8%B2.jpg" alt="تيشيرت رياضي">
+                <h3>تيشيرت رياضي</h3>
+                <p>تيشيرتات مريحة ومناسبة لكل الأوقات.</p>
+                <button>اشتر الآن</button>
+            </div>
+            <div class="product">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuJE75DMtCJYkZV4KwdbBx9eGEAEx0iO6cLg&s" alt="شورت رياضي">
+                <h3>شورت رياضي</h3>
+                <p>شورتات عالية الجودة لممارسة الرياضة.</p>
+                <button>اشتر الآن</button>
+            </div>
+            <div class="product">
+                <img src="https://media.zid.store/cdn-cgi/image/f=auto/https://media.zid.store/6b41766e-4d80-4437-a833-4ce26394aa5b/78c28f03-b787-401f-8f99-1c6a3aefa9cd.jpg" alt="حقيبة رياضية">
+                <h3>حقيبة رياضية</h3>
+                <p>حقيبة عملية لكل احتياجاتك الرياضية.</p>
+                <button>اشتر الآن</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="news">
+        <h2>آخر الأخبار</h2>
+        <div class="news-grid">
+            <div class="news-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqITBh5qGO4FGlokiLdOYgjhI8rhaDdmBNyA&s" alt="أخبار نايك">
+                <h3>نايك تطلق حملة جديدة</h3>
+                <p>نايك تطلق حملة عالمية لتشجيع الشباب على ممارسة الرياضة.</p>
+                <a href="#">اقرأ المزيد</a>
+            </div>
+            <div class="news-item">
+                <img src="https://c.files.bbci.co.uk/29F5/production/_105214701_1.jpg" alt="أخبار نايك">
+                <h3>منتج جديد في الأسواق</h3>
+                <p>نايك تطلق أحدث حذاء رياضي بتكنولوجيا مبتكرة.</p>
+                <a href="#">اقرأ المزيد</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>اتصل بنا</h2>
+        <form action="#" id="contact-form">
+            <div class="form-group">
+                <label for="name">الاسم:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">البريد الإلكتروني:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">الرسالة:</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit">إرسال</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="social-media">
+            <a href="#" aria-label="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="تويتر"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="إنستغرام"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p>حقوق النشر &copy; 2024 شركة نايك. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <script>
+        // Scroll to section
+        function scrollToSection(sectionId) {
+            document.querySelector(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Form submission
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('تم إرسال رسالتك بنجاح!');
+        });
+    </script>
+</body>
+</html>
